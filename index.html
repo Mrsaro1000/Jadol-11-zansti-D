@@ -31,6 +31,17 @@
         tr:hover {
             background-color: #e0f7fa;
         }
+        button {
+ 			background-color: #04AA6D; /* Green */
+ 		    border: none;
+ 			color: white;
+ 			padding: 15px 32px;
+ 			text-align: center;
+ 			text-decoration: none;
+ 			display: inline-block;
+ 			font-size: 19px;
+            font-weight: bold;
+}
     </style>
 </head>
 <body>
@@ -87,5 +98,20 @@
         </tr>
     </table>
 
+    <button onclick="showTomorrowsSubjects()">چیمان هەیە سبەینێ؟</button>
+    <script>
+        function showTomorrowsSubjects() {
+            const subjects = {
+                0: '١، ٢، ٣، ٤، ٥، ٦',
+                1: 'بیرکاری، ئینگلیزی، فیزیا، کیمیا',
+                2: '١، ٢، ٣، ٤، ٥، ٦',
+                3: '١، ٢، ٣، ٤، ٥، ٦',
+                4: '١، ٢، ٣، ٤، ٥، ٦'
+            };
+            const today = new Date().getDay();
+            const tomorrow = (today + 1) % 5;
+            alert('جەدۆلی سبەینێ: ' + subjects[tomorrow]);
+        }
+    </script>
 </body>
 </html>
