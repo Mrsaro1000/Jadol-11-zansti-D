@@ -111,9 +111,14 @@
                 4: 'عەرەبی، عەرەبی، بیرکاری، فیزیا، هونەر'
             };
             const today = new Date().getDay();
-            const tomorrow = (today + 1) % 5;
-            alert('جەدۆلی سبەینێ: ' + subjects[tomorrow]);
-        }
+            
+            if (today === 4 || today === 5) { 
+                alert('سبەینێ پشووە.');
+            } else {
+                const tomorrow = (today + 1) % 7;
+                alert('جەدۆلی سبەینێ: ' + subjects[tomorrow]);
+            }}
+
     </script>
 </body>
 </html>
